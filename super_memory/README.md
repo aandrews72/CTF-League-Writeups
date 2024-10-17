@@ -79,7 +79,7 @@ A good takeaway from this challenge is awareness of potential buffer overflow ex
 
 ## **Resources Used**
 
-- [Decimal to Hexadecimal conversion](https://www.rapidtables.com/convert/number/decimal-to-hex.html)
+- [Decimal to Hexadecimal Conversion](https://www.rapidtables.com/convert/number/decimal-to-hex.html)
 - [Wikipedia: Overview of Endianness](https://en.wikipedia.org/wiki/Endianness)
-- [Stack Overflow: Difference between big and little endian](https://stackoverflow.com/questions/701624/difference-between-big-endian-and-little-endian-byte-order)
-- [GeeksforGeeks](https://www.geeksforgeeks.org/structure-member-alignment-padding-and-data-packing/)
+- [Stack Overflow: Differences With Big and Little Endian](https://stackoverflow.com/questions/701624/difference-between-big-endian-and-little-endian-byte-order)
+- [GeeksforGeeks: Padding For Structs](https://www.geeksforgeeks.org/structure-member-alignment-padding-and-data-packing/)
