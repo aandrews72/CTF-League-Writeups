@@ -59,9 +59,9 @@ In C, it is easy to overwrite values in memory addresses if the code is not care
 
 The question now is, how do we increase our `dollars` amount with characters? 
 
-In memory, letters are represented as their ASCII values. We need $1650549605, which in hexadecimal is `62616365`. In ASCII, a, b, c, and d are represented as `61`, `62`, `63`, and `64` in hexadecimal. This is close, but to represent `65`, we can simply pick up an extra dollar, incrementing `dollars` by 1 to turn `64` into `65`.
+In memory, letters are represented as their ASCII values. We need $1650549605, which in hexadecimal is `0x62616365`. In ASCII, a, b, c, and d are represented as `0x61`, `0x62`, `0x63`, and `0x64` in hexadecimal. This is close, but to represent `65`, we can simply pick up an extra dollar, incrementing `dollars` by 1 to turn `0x64` into `0x65`.
 
-Another important note: modern systems typically use little-endian byte order, which means bytes are stored in reverse order. Instead of overflowing the `inventory` array with `b, a, c, d` (and a dollar), we would overflow it with `d, c, a, b`, and add the dollar afterward. So, although it seems like we're getting `65636162` in hexadecimal, when read from memory, it will be represented as `62616365`, the value we need.
+Another important note: modern systems typically use little-endian byte order, which means bytes are stored in reverse order. Instead of overflowing the `inventory` array with `b, a, c, d` (and a dollar), we would overflow it with `d, c, a, b`, and add the dollar afterward. So, although it seems like we're getting `0x65636162` in hexadecimal, when read from memory, it will be represented as `0x62616365`, the value we need.
 
 One more thing: I learned that when compiling C programs, compilers often add padding between elements in structs. In this case, padding was added between the `inventory` array and the `dollars` variable, so I had to pick up two additional letters before I could start overflowing the `dollars` variable.
 
