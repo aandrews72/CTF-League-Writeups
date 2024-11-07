@@ -17,7 +17,7 @@ For this level's README, the contents were:
 I had my credentials stored in my_repository but somebody deleted them!
 can you cd to my_repository and help me restore them?"*
 
-As shown in [the imgs folder](/imgs), I was able to use ```git reflog``` which provided the hash of a commit message related to storing credentials. I used ```git show <hash>``` on that hash, which revealed the next level username and the password.
+As shown in [the imgs folder](/git_forensics/imgs), I was able to use ```git reflog``` which provided the hash of a commit message related to storing credentials. I used ```git show <hash>``` on that hash, which revealed the next level username and the password.
 
 ## Level 1
 This level was surprisingly a bit easier, as I didn't even need to use ```git show```. After reading the README, I moved to ```my_repository````, used the ```git reflog``` command, and found that the credentials were in the commit message. 
